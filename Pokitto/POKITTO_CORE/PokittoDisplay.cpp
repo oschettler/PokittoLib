@@ -567,19 +567,19 @@ void Display::clear() {
         c = c | (c << 4);
     } else if (bpp==3){
         uint16_t j = POK_BITFRAME;
-        if (bgcolor & 0x1) memset((void*)m_scrbuf,0xFF,j);// R
-        else memset((void*)m_scrbuf,0x00,j);// R
-        if ((bgcolor>>1) & 0x1) memset((void*)m_scrbuf+POK_BITFRAME,0xFF,j);// G
-        else memset((void*)m_scrbuf+POK_BITFRAME,0x00,j);// G
-        if ((bgcolor>>2) & 0x1) memset((void*)m_scrbuf+POK_BITFRAME*2,0xFF,j);// B
-        else memset((void*)m_scrbuf+POK_BITFRAME*2,0x00,j);// B
+        if (bgcolor & 0x1) memset((char*)m_scrbuf,0xFF,j);// R
+        else memset((char*)m_scrbuf,0x00,j);// R
+        if ((bgcolor>>1) & 0x1) memset((char*)m_scrbuf+POK_BITFRAME,0xFF,j);// G
+        else memset((char*)m_scrbuf+POK_BITFRAME,0x00,j);// G
+        if ((bgcolor>>2) & 0x1) memset((char*)m_scrbuf+POK_BITFRAME*2,0xFF,j);// B
+        else memset((char*)m_scrbuf+POK_BITFRAME*2,0x00,j);// B
         setCursor(0,0);
         return;
     } else {
         c = (c & 0x0F) | (c << 4);
     }
     uint16_t j = sizeof(screenbuffer);
-    memset((void*)m_scrbuf,c,j);
+    memset((char*)m_scrbuf,c,j);
 
     setCursor(0,0);
 

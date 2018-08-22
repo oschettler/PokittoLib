@@ -43,7 +43,7 @@
  *
  * License for Gamebuino-identical code:
  *
- * (C) Copyright 2014 Aurélien Rodot. All rights reserved.
+ * (C) Copyright 2014 Aurï¿½lien Rodot. All rights reserved.
  *
  * This file is part of the Gamebuino Library (http://gamebuino.com)
  *
@@ -84,9 +84,9 @@ int __sx=0;
 /** discrete hardware volume control **/
 
 uint8_t Pokitto::discrete_vol = 0;
-uint8_t const Pokitto::discrete_vol_levels[8]      {0,32,64,96,128,160,192,224};
-uint8_t const Pokitto::discrete_vol_hw_levels[8]   {0,27,64,96,36,117,127,127};
-uint8_t const Pokitto::discrete_vol_multipliers[8] {0,127,127,127,192,192,255,255};
+uint8_t const Pokitto::discrete_vol_levels[8] =      {0,32,64,96,128,160,192,224};
+uint8_t const Pokitto::discrete_vol_hw_levels[8] =   {0,27,64,96,36,117,127,127};
+uint8_t const Pokitto::discrete_vol_multipliers[8] = {0,127,127,127,192,192,255,255};
 
 Pokitto::Core _soundc;
 
